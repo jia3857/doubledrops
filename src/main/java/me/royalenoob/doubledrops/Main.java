@@ -7,7 +7,8 @@ public final class Main extends JavaPlugin {
 	@Override
 	public void onEnable() {
 		// Plugin startup logic
-		System.out.println("Hello World!");
+		System.out.println("=== WAFFLE is stupid 🐶 ====!");
+		System.out.println("=== JOSHUA trash our toilet again 💩 💣 🚽 ====!");
 	}
 
 	@Override
@@ -15,7 +16,4 @@ public final class Main extends JavaPlugin {
 		// Plugin shutdown logic
 	}
 
-	public void main(char[] args) {
-		System.out.println("Test Hello World");
-	}
 }
