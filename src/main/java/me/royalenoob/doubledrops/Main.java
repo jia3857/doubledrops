@@ -9,11 +9,11 @@ public final class Main extends JavaPlugin {
 		// Plugin startup logic
 		System.out.println("=== WAFFLE is stupid 🐶 ====!");
 		System.out.println("=== JOSHUA trash our toilet again 💩 💣 🚽 ====!");
+		getServer().getPluginManager().registerEvents(new BreakBlock(), this);
 	}
 
 	@Override
 	public void onDisable() {
 		// Plugin shutdown logic
 	}
-
 }

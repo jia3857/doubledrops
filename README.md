@@ -23,11 +23,20 @@ $ java -jar spigot-1.16.5.jar --nogui
 ## Put file under ${spigot_dir}/plugins/
 
 ```bash
-$ cp target/doubledrops-1.0-SNAPSHOT.jar ${PROJECT_TOP_DIR}/MC/plugins
+$ cd $PROJECT_TOP_DIR
+
+# build src/**/*.java into target/doubledrops-1.0-SNAPSHOT.jar
+$ mvn package
+
+# copy target/doubledrops-1.0-SNAPSHOT.jar ${PROJECT_TOP_DIR}/MC/plugins
+$ mvn install
 ```
 
 ## Start spigot server again and verify plugin properly load
+
 ```bash
+$ cd $PROJECT_TOP_DIR/MC
+
 $ java -jar spigot-1.16.5.jar --nogui
 # verify plugin properly load, eg:
 #   [13:26:56] [Server thread/INFO]: Time elapsed: 1481 ms
