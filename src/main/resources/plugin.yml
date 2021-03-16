@@ -1,6 +1,6 @@
 name: Doubledrops
 version: ${project.version}
-main: me.royalenoob.doubledrops.Main
+main: me.royalenoob.doubledrops.ListenersRegisterMain
 api-version: 1.16
 authors: [ RoyalNoob ]
 description: Diamond Ores drop 2 diamonds

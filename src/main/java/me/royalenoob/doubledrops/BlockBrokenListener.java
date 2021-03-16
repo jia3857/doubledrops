@@ -7,7 +7,8 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockBreakEvent;
 import org.bukkit.inventory.ItemStack;
 
-public class BreakBlock implements Listener {
+public class BlockBrokenListener implements Listener {
+
 	@EventHandler
 	public void onPlayerBreakBlock(BlockBreakEvent event) {
 		Block blockBroken = event.getBlock();
