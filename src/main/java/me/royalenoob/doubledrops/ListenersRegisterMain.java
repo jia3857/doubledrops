@@ -6,12 +6,13 @@ import java.util.logging.Logger;
 
 public final class ListenersRegisterMain extends JavaPlugin {
 
-	private static Logger LOGGER = Logger.getLogger(ListenersRegisterMain.class.getName());
+	private static Logger LOGGER = Logger.getLogger(Main.class.getName());
 
 	@Override
 	public void onEnable() {
 		// Plugin startup logic
-		System.out.println("=== WAFFLE is stupid 🐶 ====!");
+
+		LOGGER.info("=== WAFFLE is stupid 🐶 ====!");
 		getServer().getPluginManager().registerEvents(new BlockBrokenListener(), this);
 		//getServer().getPluginManager().registerEvents(new BlockBrokenListener(this), this);
 		getServer().getPluginManager().registerEvents(new EggsThrownListener(this), this);
