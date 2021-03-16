@@ -20,11 +20,6 @@ public class EggsThrownListener implements Listener {
 	@EventHandler(priority = EventPriority.NORMAL, ignoreCancelled = true)
 	public void onEggThrow(final PlayerEggThrowEvent event) {
 		final Player player = event.getPlayer();
-	}
-
-	@EventHandler
-	public void teleport(PlayerEggThrowEvent e) {
-		Player player = e.getPlayer();
 
 		Random randomNum = new Random();
 		String entity;
@@ -33,42 +28,42 @@ public class EggsThrownListener implements Listener {
 
 		//player.sendMessage("You shouldn't waste food " + player.getName() + "!");
 
-		boolean answer = e.isHatching();
+		boolean answer = event.isHatching();
 
 		if(chance == 1) {
-			e.setHatchingType(EntityType.COW);
+			event.setHatchingType(EntityType.COW);
 			entity = "cow!";
 		}
 		else if(chance == 2) {
-			e.setHatchingType(EntityType.BAT);
+			event.setHatchingType(EntityType.BAT);
 			entity = "bat!";
 		}
 		else if(chance == 3) {
-			e.setHatchingType(EntityType.GIANT);
+			event.setHatchingType(EntityType.GIANT);
 			entity = "giant!";
 		}
 		else if(chance == 4) {
-			e.setHatchingType(EntityType.ENDER_CRYSTAL);
+			event.setHatchingType(EntityType.ENDER_CRYSTAL);
 			entity = "ender crystal?";
 		}
 		else if(chance == 5) {
-			e.setHatchingType(EntityType.PRIMED_TNT);
+			event.setHatchingType(EntityType.PRIMED_TNT);
 			entity = "primed tnt?";
 		}
 		else if(chance == 6) {
-			e.setHatchingType(EntityType.SHEEP);
+			event.setHatchingType(EntityType.SHEEP);
 			entity = "sheep!";
 		}
 		else if(chance == 7) {
-			e.setHatchingType(EntityType.OCELOT);
+			event.setHatchingType(EntityType.OCELOT);
 			entity = "ocelot!";
 		}
 		else if(chance == 8) {
-			e.setHatchingType(EntityType.ZOMBIE);
+			event.setHatchingType(EntityType.ZOMBIE);
 			entity = "zombie...";
 		}
 		else {
-			e.setHatchingType(EntityType.WOLF);
+			event.setHatchingType(EntityType.WOLF);
 			entity = "wolf!";
 		}
 
