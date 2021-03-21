@@ -1,6 +1,7 @@
 package me.royalenoob.doubledrops;
 
 import org.bukkit.entity.EntityType;
+import org.bukkit.entity.Item;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
@@ -28,10 +29,20 @@ public class EggsThrownListener implements Listener {
 
 		//player.sendMessage("You shouldn't waste food " + player.getName() + "!");
 
+		boolean once = false;
+		if (once) {
+			EntityType[] entities = EntityType.class.getEnumConstants();
+			StringBuilder sb = new StringBuilder();
+			for (EntityType e : entities) {
+				sb.append("-->" + e.name() + "\n");
+			}
+			System.out.println("Entities:\n" + sb);
+			once = false;
+		}
 		boolean answer = event.isHatching();
 
 		if(chance == 1) {
-			event.setHatchingType(EntityType.COW);
+			event.setHatchingType(EntityType.ENDER_DRAGON);
 			entity = "cow!";
 		}
 		else if(chance == 2) {
